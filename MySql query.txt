@@ -1,0 +1,36 @@
+create database proUI;
+use proUI;
+
+CREATE TABLE USERS(
+	USERNAME VARCHAR(150),
+    PASSWORD_ VARCHAR(150)
+);
+SELECT * FROM USERS;
+delete from users;
+INSERT INTO USERS(USERNAME,PASSWORD_)
+	VALUES ();
+            
+create table Usertable(
+customer_id INT AUTO_INCREMENT PRIMARY KEY,
+customer_name VARCHAR(150) NOT NULL,
+customer_address  VARCHAR(150) NOT NULL,
+customer_email varchar(150) not null,
+tranning_plans VARCHAR(250),
+sauna varchar(50),
+swimming varchar(10),
+personnel_train_hour varchar(30),
+weight_kg INT NOT NULL,
+target_weight_kg INT NOT NULL
+); 
+
+                        
+select * from Usertable;
+delete from Usertable;
+
+CREATE TABLE tranning_palns(
+	customer_id INT ,
+    
+    price DECIMAL(10,2) NOT NULL,
+	FOREIGN KEY (customer_id) REFERENCES Usertable(customer_id)
+
+);
