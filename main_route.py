@@ -10,11 +10,10 @@ mainwindow.columnconfigure(0,weight=1)
 
 page1=Frame(mainwindow)
 page2=Frame(mainwindow)
-# page3=Frame(mainwindow)
+
 
 page1.configure(bg='aquamarine')
 page2.configure(bg='dark gray')
-# page3.configure(bg='dark gray')
 
 
 for frame in(page1,page2):
@@ -28,10 +27,6 @@ def login():
 def logout():
     page1.tkraise()
     
-# def go_to_result():
-#     page3.tkraise()
-
-
 
 Login_page(page1,login)
 Dashboard_page(page2,logout)
