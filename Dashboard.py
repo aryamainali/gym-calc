@@ -10,8 +10,6 @@ connection = pymysql.connect(
     password='********',
     database='proUI'
 )
-# sqlite connection
-# connection = sqlite3.connect("database.db")
 
 cur = connection.cursor()
 cur.execute("SELECT * FROM Usertable")
@@ -396,8 +394,5 @@ def Dashboard_page(page, logout):
         result_listbox.insert(END, "Weight Comparison: {}".format(weight_comparison))
 
 
-    # Create a button to store the selected values
-
-    # Create a button to calculate the cost of training
     calculate_button = Tk.Button(tab4, text="Calculate Cost", command=calculate_cost)
     calculate_button.grid(row=1, column=0, padx=10, pady=10)
